@@ -1,0 +1,2094 @@
+<JZML>
+<WINDOW class="Container" text="DrumSeqRight" x="0" y="0" width="706" height="737" id="468" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="1" tabbar="0" meta="1">
+<WINDOW class="Tab" text="DrumSeqRight" x="0" y="0" width="690" height="721" state="1" group="0" font="tahoma,11,0" >
+<WINDOW class="Switches" text="Switches2" x="12" y="1" width="690" height="40" id="379" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="0" color="1118481,7241597" column="8" label="2" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="0.000000,1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Switches2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=set(stretch(0.5, 6), -1, tmr)" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Switches2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tmr=cModuleNav.cWindow.On.x?((time*1)%6):tmr" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Switches2/tmr" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="decl i;
+
+for(i=0;i<8;i++){
+ if(Switches2.x[i]){
+  oscout(SeqContRight.SwitchesSeq.osc_num,'/RightOctave',i+3);
+  break;
+ }
+}" trigger_script="Switches2.x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Switches2/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="on_load()" script="Switches2.on_change();" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Switches2/on_load" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text45" x="1437" y="52" width="92" height="61" id="394" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="1">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text45/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text46" x="1447" y="195" width="92" height="61" id="395" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="2">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text46/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text47" x="1429" y="358" width="92" height="61" id="396" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="3">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text47/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text48" x="1423" y="504" width="98" height="61" id="397" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="4">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text48/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text49" x="1437" y="666" width="92" height="61" id="398" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="5">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text49/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text50" x="1429" y="836" width="92" height="61" id="399" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="6">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Text50/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton29" x="1312" y="240" width="123" height="402" id="400" state="241" group="0" font="tahoma,11,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="0" bitmap="0,0" capture="1" color="1788672,32768" label_off="Show" label_on="Hide " outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/CustomButton29/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/CustomButton29/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="if(x==0){show(Sequences,0)};
+else{show(Sequences,1)};" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/CustomButton29/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect1" x="1366" y="10" width="45" height="45" id="401" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect1/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect1/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect1/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect2" x="1366" y="86" width="45" height="45" id="402" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect2/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect3" x="1366" y="163" width="45" height="45" id="403" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_update()" script="" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect3/osc_update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect4" x="1366" y="240" width="45" height="45" id="404" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect4/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_update()" script="" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect4/osc_update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect5" x="1366" y="315" width="45" height="45" id="405" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect5/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect5/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect5/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect6" x="1366" y="392" width="45" height="45" id="406" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect6/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect6/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect6/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect7" x="1366" y="512" width="45" height="45" id="407" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect7/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect7/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect7/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect8" x="1366" y="586" width="45" height="45" id="408" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect8/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect8/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect8/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect9" x="1366" y="665" width="45" height="45" id="409" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect9/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect9/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect9/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect10" x="1366" y="748" width="45" height="45" id="410" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect10/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect10/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect10/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect11" x="1366" y="824" width="45" height="45" id="411" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect11/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect11/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect11/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="VelSelect12" x="1366" y="900" width="45" height="45" id="412" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1788672,32768" column="1" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect12/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/VelSelect12/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/VelSelect12/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Container" text="DrumFx" x="-4" y="553" width="699" height="188" id="419" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="1" tabbar="0" meta="1">
+<WINDOW class="Tab" text="FX2" x="0" y="0" width="683" height="172" id="1" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Pads" text="RowPad" x="0" y="0" width="603" height="38" id="374" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1118481,7241597" column="7" label="0" multicolor="0" multilabel="0" row="1">
+<PARAM name="x=" value="0.000000,0.000000,1.000000,1.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=set(stretch(0, 4), -1, tmr)" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tmr=cModuleNav.cWindow.Rainbow.x?((time*4)%6):tmr" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/RowPad/tmr" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Auto_R1()" script="{
+
+SeqContRight.SwitchesSeq.x[0+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[4+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[8+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[12+(16*Row.selection)]=1;
+}" trigger_script="x[0]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R1" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R2()" script="{
+
+SeqContRight.SwitchesSeq.x[2+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[6+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[10+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[14+(16*Row.selection)]=1;
+}" trigger_script="x[1]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R3()" script="{
+
+SeqContRight.SwitchesSeq.x[0+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[2+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[4+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[6+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[8+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[10+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[12+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[14+(16*Row.selection)]=1;
+}" trigger_script="x[2]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R3" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R4()" script="{
+
+SeqContRight.SwitchesSeq.x[1+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[3+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[5+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[7+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[9+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[11+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[13+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[15+(16*Row.selection)]=1;
+}" trigger_script="x[3]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R4" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R5()" script="{
+//Odds
+SeqContRight.SwitchesSeq.x[1+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[3+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[5+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[7+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[9+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[11+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[13+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[15+(16*Row.selection)]=1;
+//Evens
+SeqContRight.SwitchesSeq.x[0+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[2+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[4+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[6+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[8+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[10+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[12+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[14+(16*Row.selection)]=1;
+}" trigger_script="x[4]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R5" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R6()" script="{
+
+SeqContRight.SwitchesSeq.x[0+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[3+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[6+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[9+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[12+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[15+(16*Row.selection)]=1;
+
+}" trigger_script="x[5]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R6" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Auto_R7()" script="{
+
+SeqContRight.SwitchesSeq.x[0+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[3+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[4+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[6+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[7+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[9+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[11+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[12+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[15+(16*Row.selection)]=1;
+SeqContRight.SwitchesSeq.x[16+(16*Row.selection)]=1;
+
+}" trigger_script="x[6]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/RowPad/Auto_R7" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Pads" text="ClearRow" x="611" y="0" width="72" height="38" id="376" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="3803136,7241597" column="1" label="0" multicolor="0" multilabel="0" row="1">
+<PARAM name="x=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRow/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Clear()" script="decl col;
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*Row.selection)]=0;
+}" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/ClearRow/Clear" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="Label1st" x="35" y="123" width="50" height="38" id="379" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="1st">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Label1st/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Pads" text="ClearAll" x="494" y="119" width="72" height="38" id="381" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="4000000,7241597" column="1" label="0" multicolor="0" multilabel="0" row="1">
+<PARAM name="x=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAll/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Clear()" script="decl col, row=Row.selection;
+for(row=0; row<12; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/ClearAll/Clear" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="ClearRowLabel" x="611" y="0" width="72" height="38" id="382" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7241597" content="Clear Row">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearRowLabel/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="ClearAllLabel" x="494" y="116" width="72" height="38" id="383" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7241597" content="Clear All">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/ClearAllLabel/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Pads" text="DelBlock" x="0" y="126" width="477" height="31" id="389" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1118481,7241597" column="5" label="0" multicolor="0" multilabel="0" row="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=set(stretch(0, 4), -1, tmr)" value="-1.000000,0.000000,0.000000,0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DelBlock/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="del4()" script="decl col, row=Row.selection;
+for(row=0; row<5; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x[3]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/DelBlock/del4" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="del1()" script="decl col, row=Row.selection;
+for(row=0; row<4; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x[0]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/DelBlock/del1" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="del2()" script="decl col, row=Row.selection;
+for(row=4; row<8; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x[1]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/DelBlock/del2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="del3()" script="decl col, row=Row.selection;
+for(row=8; row<12; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x[2]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/DelBlock/del3" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="del5()" script="decl col, row=Row.selection;
+for(row=5; row<8; row++){
+for(col=0; col<16; col++)
+{
+SeqContRight.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x[4]" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/DelBlock/del5" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text4" x="30" y="126" width="464" height="32" id="390" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7241597" content="Clear Sections">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Text4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Row" x="164" y="49" width="177" height="27" id="391" state="245" group="0" font="tahoma,13,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" scale="0" content="Kick,Snare,H/H Closed,H/H Open,Ride,Kick 2,Snare 2,FX/Ride,Custom 1,Custom 2,Custom 3,Custom  4">
+<PARAM name="selection=" value="12.000000" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Row/selection" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="TabMinus" x="334" y="38" width="65" height="52" id="465" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="6,0" capture="1" color="865343,1596013" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/TabMinus/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/TabMinus/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Plus()" script="
+if (Row.selection<12)Row.selection=Row.selection+1;" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/TabMinus/Plus" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="TabPlus" x="102" y="38" width="65" height="52" id="466" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="5,0" capture="1" color="865343,1596013" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/TabPlus/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/TabPlus/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Minus()" script="
+if (Row.selection>0)Row.selection=Row.selection-1;" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/TabPlus/Minus" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Tab" text="FX3" x="0" y="0" width="683" height="172" id="2" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Pads" text="PresetsLeft" x="0" y="0" width="683" height="165" id="374" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="0" color="2185984,1596013" column="16" label="0" multicolor="0" multilabel="0" row="5">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0.1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=stretch({0.1,1},5)" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="TemplateScript()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-191]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[0+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+DrumSeqLeft.SwitchesSeq.x[0+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*3)]=1;
+//Row 5 - Ride
+DrumSeqLeft.SwitchesSeq.x[0+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*4)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*4)]=1;
+//Row 6 - Crash
+" trigger_script="" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/TemplateScript" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern0()" script="" trigger_script="x[0]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern0" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern1()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+
+" trigger_script="x[1]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern1" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern3()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+
+" trigger_script="x[3]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern3" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern2()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+
+" trigger_script="x[2]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern4()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+
+" trigger_script="x[4]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern4" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern5()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+" trigger_script="x[5]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern5" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern6()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+" trigger_script="x[6]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern6" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern7()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[4+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+" trigger_script="x[7]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern7" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern8()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+" trigger_script="x[8]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern8" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern9()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+
+//Row 4 - HH Open
+
+//Row 5 - Ride
+
+
+//Row 6 - Crash
+" trigger_script="x[9]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern9" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern10()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+//Row 7 - Second Snare
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[10]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern10" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern11()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+//Row 7 - Second Snare
+//Row 8 - FX/Crash
+
+
+" trigger_script="x[11]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern11" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern12()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+//Row 7 - Second Snare
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[12]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern12" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern13()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[1+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+//Row 4 - HH Open
+//Row 7 - Second Snare
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[13]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern13" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern14()" script="
+
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[1+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+//Row 4 - HH Open
+DrumSeqLeft.SwitchesSeq.x[3+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*3)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*3)]=1;
+//Row 5 - Ride
+//Row 6 - Crash
+//Row 7 - Second Snare
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[14]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern14" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern15()" script="
+
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[15]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern15" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern16()" script="
+
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[4+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*1)]=1;
+
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[16]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern16" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern17()" script="
+
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[17]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern17" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern18()" script="
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[18]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern18" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern19()" script="
+
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*0)]=1;
+//Row 2 - Snare
+
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[19]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern19" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern20()" script="
+
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[0+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*2)]=1;
+
+//Row 8 - FX/Crash
+
+
+
+" trigger_script="x[20]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern20" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern21()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+
+" trigger_script="x[21]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern21" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern22()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+
+" trigger_script="x[22]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern22" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern23()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[1+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+
+" trigger_script="x[23]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern23" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern24()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[12+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[2+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+
+" trigger_script="x[24]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern24" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="pattern25()" script="
+//Clear All
+DrumSeqLeft.SwitchesSeq.x[0-63]=0;
+//Row 1 - Kick
+DrumSeqLeft.SwitchesSeq.x[0+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[2+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[4+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[6+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[8+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[10+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*0)]=1;
+DrumSeqLeft.SwitchesSeq.x[14+(16*0)]=1;
+//Row 2 - Snare
+DrumSeqLeft.SwitchesSeq.x[3+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*1)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*1)]=1;
+//Row 3 - HH Closed
+DrumSeqLeft.SwitchesSeq.x[1+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[3+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[5+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[7+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[9+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[11+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[13+(16*2)]=1;
+DrumSeqLeft.SwitchesSeq.x[15+(16*2)]=1;
+
+
+" trigger_script="x[25]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PresetsLeft/pattern25" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Tab" text="FX4" x="0" y="0" width="683" height="172" id="3" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Switches" text="Switches" x="-1" y="-7" width="694" height="41" id="439" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1118481,7241597" column="16" label="0" multicolor="0" multilabel="0" paint="0" radio="1" row="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="AutoBar1()" script="decl val = Bar1.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[0]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar1" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar2()" script="decl val = Bar2.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[1]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar3()" script="decl val = Bar3.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[2]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar3" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar4()" script="decl val = Bar4.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[3]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar4" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar5()" script="decl val = Bar5.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[4]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar5" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar6()" script="decl val = Bar6.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[5]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar6" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar7()" script="decl val = Bar7.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[6]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar7" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar8()" script="decl val = Bar8.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[7]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar8" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar9()" script="decl val = Bar9.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[8]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar9" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar10()" script="decl val = Bar10.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[9]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar10" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar11()" script="decl val = Bar11.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[10]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar11" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar12()" script="decl val = Bar12.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[11]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar12" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar13()" script="decl val = Bar13.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[12]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar13" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar14()" script="decl val = Bar14.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;" trigger_script="x[13]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar14" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar15()" script="decl val = Bar15.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[14]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar15" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="AutoBar16()" script="decl val = Bar16.value;
+PresetsLeft.x[0-99]=0;
+PresetsLeft.x[val]=1;
+" trigger_script="x[15]" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/AutoBar16" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="osc()" script="" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches/osc" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="osc2(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Switches.x[i] = 0;
+ }
+ 
+ 
+ Switches.x[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/BeatStep" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds26" x="-9" y="-8" width="708" height="24" id="440" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="7241597,32768" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Leds26/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Leds26/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Leds26/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds26.value[i] = 0;
+ }
+ 
+ 
+ Leds26.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/BeatStep" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar1" x="1" y="0" width="39" height="28" id="442" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar1/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar2" x="44" y="0" width="39" height="28" id="444" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar3" x="87" y="0" width="39" height="28" id="445" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar3/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar4" x="130" y="0" width="39" height="28" id="446" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar4/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar5" x="177" y="0" width="36" height="28" id="447" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar5/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar6" x="219" y="0" width="39" height="28" id="448" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar6/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar7" x="263" y="0" width="39" height="28" id="449" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar7/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar8" x="306" y="1" width="39" height="28" id="450" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar8/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar9" x="348" y="0" width="39" height="28" id="451" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar9/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar10" x="392" y="0" width="39" height="28" id="452" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar10/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar11" x="436" y="0" width="36" height="28" id="453" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar11/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar12" x="478" y="0" width="39" height="28" id="454" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar12/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar13" x="522" y="0" width="39" height="28" id="455" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar13/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar14" x="565" y="0" width="39" height="28" id="456" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar14/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar15" x="608" y="0" width="39" height="28" id="457" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar15/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Bar16" x="650" y="0" width="39" height="28" id="458" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=" value="0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Bar16/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Container" text="PatternChooser" x="-3" y="34" width="686" height="139" id="459" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="1" tabbar="1" meta="0">
+<WINDOW class="Monitor" text="MonCurrent" x="57" y="14" width="191" height="30" id="8" state="245" group="0" font="tahoma,16,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=Current" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/MonCurrent/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="SetBtn" x="585" y="0" width="85" height="48" id="9" state="241" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,6" capture="1" color="19200,7241597" label_off="Set Pattern" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/SetBtn/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/SetBtn/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="if (Bar.x[0]==1) Bar1.value = Current;
+if (Bar.x[1]==1) Bar2.value = Current;
+if (Bar.x[2]==1) Bar3.value = Current;
+if (Bar.x[3]==1) Bar4.value = Current;
+if (Bar.x[4]==1) Bar5.value = Current;
+if (Bar.x[5]==1) Bar6.value = Current;
+if (Bar.x[6]==1) Bar7.value = Current;
+if (Bar.x[7]==1) Bar8.value = Current;
+if (Bar.x[8]==1) Bar9.value = Current;
+if (Bar.x[9]==1) Bar10.value = Current;
+if (Bar.x[10]==1) Bar11.value = Current;
+if (Bar.x[11]==1) Bar12.value = Current;
+if (Bar.x[12]==1) Bar13.value = Current;
+if (Bar.x[13]==1) Bar14.value = Current;
+if (Bar.x[14]==1) Bar15.value = Current;
+if (Bar.x[15]==1) Bar16.value = Current;" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/SetBtn/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Bar" x="0" y="77" width="569" height="49" id="442" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1118481,7241597" column="16" label="2" multicolor="0" multilabel="0" paint="1" radio="0" row="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Bar/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Bar/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Inc" x="215" y="0" width="48" height="48" id="443" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="6,6" capture="1" color="1118481,7241597" label_off=">" label_on=">" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="decl val = Current;
+if (val<99){Current = val+1;}
+else Current = 0;" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Dec" x="48" y="0" width="48" height="48" id="444" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="5,5" capture="1" color="1118481,7241597" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="decl val = Current;
+if(Current>0){Current = val-1;}
+else Current=99;" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="ResetS" x="410" y="0" width="65" height="48" id="446" state="241" group="0" font="tahoma,8,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,6" capture="1" color="1118481,7241597" label_off="Reset Selection" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetS/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetS/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="Current = 0;
+Bar.x = 0;
+" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetS/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="PtnSelectLabel2" x="76" y="0" width="160" height="25" id="447" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7241597" content="Pattern Selection">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/PtnSelectLabel2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="ResetBtn2" x="475" y="0" width="57" height="48" id="461" state="241" group="0" font="tahoma,8,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,6" capture="1" color="1118481,7241597" label_off="Reset Patterns" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetBtn2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetBtn2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="Bar1.value = 0;
+Bar2.value = 0;
+Bar3.value = 0;
+Bar4.value = 0;
+Bar5.value = 0;
+Bar6.value = 0;
+Bar7.value = 0;
+Bar8.value = 0;
+Bar9.value = 0;
+Bar10.value = 0;
+Bar11.value = 0;
+Bar12.value = 0;
+Bar13.value = 0;
+Bar14.value = 0;
+Bar15.value = 0;
+Bar16.value = 0;
+" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetBtn2/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="ResetAll" x="532" y="0" width="53" height="48" id="462" state="241" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,0" capture="1" color="3539712,8324610" label_off="Reset " label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetAll/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetAll/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="decl col, row=Row.selection;
+for(row=0; row<12; row++){
+for(col=0; col<16; col++)
+{
+DrumSeqLeft.SwitchesSeq.x[col+(16*row)]=0;
+}}" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/ResetAll/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Dec2" x="0" y="0" width="48" height="48" id="463" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="10,10" capture="1" color="1118481,7241597" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="decl val = Current;
+if(Current>0){Current = val-10;}
+else Current=99;" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Dec2/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Inc2" x="261" y="0" width="48" height="48" id="464" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="9,9" capture="1" color="1118481,7241597" label_off=">" label_on=">" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="act()" script="decl val = Current;
+if (val<99){Current = val+10;}
+else Current = 0;" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Inc2/act" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="BarSelectLabel" x="214" y="77" width="160" height="33" id="465" state="245" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7241597" content="Bar Selection">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/BarSelectLabel/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="Current=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/PatternChooser/Current" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-256,0,-256" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="init()" script="Current=0;" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/PatternChooser/init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Tab" text="FX5" x="0" y="0" width="683" height="172" id="4" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="CustomButton" text="Gate2" x="217" y="76" width="160" height="52" id="37" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="0" bitmap="0,0" capture="1" color="865343,1596013" label_off="Gate" label_on="Gate" outline="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightGate" midi_target="-1" midi_trigger="1" midi_message="0xB0,0xB0,51,51" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Gate2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="Fader2" x="147" y="25" width="324" height="51" id="36" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1596013" cursor="0" grid="1" grid_steps="8" label="0" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.285714" send="25" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightGlitch" midi_target="-1" midi_trigger="1" midi_message="0xB0,0xB0,50,50" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Fader2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Fader2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Fader2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Fader2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Fader2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text" x="217" y="21" width="167" height="48" id="38" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="DrumSeqRight">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Text/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Pads" text="Switches2" x="0" y="0" width="595" height="172" id="32" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8355711,65793" column="4" label="0" multicolor="0" multilabel="1" row="2">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Switches2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="controller()" script="if (Switches2.x[0]==1) Fader2.x=0.0;
+if (Switches2.x[1]==1) Fader2.x=0.143;
+if (Switches2.x[2]==1) Fader2.x=0.286;
+if (Switches2.x[3]==1) Fader2.x=0.429;
+if (Switches2.x[4]==1) Fader2.x=0.572;
+if (Switches2.x[5]==1) Fader2.x=0.715;
+if (Switches2.x[6]==1) Fader2.x=0.858;
+if (Switches2.x[7]==1) Fader2.x=1;
+
+Gate2.x=1;
+" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches2/controller" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="gateoff()" script="Gate2.x=0;" trigger_script="x" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches2/gateoff" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="Labelsscr()" script="decl tabNames = {'1/2', '3/8', '1/4', ' 3/16', '1/8', '3/32', '1/32', '1/32'};//Tab Names
+setattribute(Switches2,'labels',tabNames);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/DrumFx/Switches2/Labelsscr" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Tab" text="FX1" x="0" y="0" width="683" height="172" id="467" state="1" group="0" font="tahoma,11,0" >
+<WINDOW class="MultiSlider" text="DrumVolRight" x="0" y="0" width="590" height="172" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="65793" gradient="1" grid="0" grid_steps="1" horizontal="0" label="0" multicolor="0" nbr="12" physic="0">
+<PARAM name="x=" value="0.993243,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,0.831081" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/DrumVolRight/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V1=x[0]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V2=x[1]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol2" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V3=x[2]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol3" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V4=x[3]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol4" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V5=x[4]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol5" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V6=x[5]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol6" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V7=x[6]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol7" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V8=x[7]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol8" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V9=x[8]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol9" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V11=x[10]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol11" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V12=x[11]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol12" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="V10=x[9]" send="9" osc_target="1" osc_trigger="1" osc_message="/DrumSeqRightVol10" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text2" x="306" y="0" width="160" height="48" id="1" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Drum Volumes">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/Text2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+</WINDOW>
+<VARIABLE name="last_step=" value="-0.570370" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/DrumFx/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="BeatSteps(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Switches.x[i] = 0;
+ }
+ 
+
+Switches.x[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/BeatStep" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Container" text="Sequences" x="13" y="3" width="703" height="51" id="439" state="0" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="7110413" label="1" tabbar="1" meta="0">
+<WINDOW class="MultiSlider" text="MultiSlider1" x="0" y="25" width="541" height="412" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="32768" gradient="1" grid="0" grid_steps="1" horizontal="0" label="0" multicolor="0" nbr="16" physic="0">
+<PARAM name="x=" value="0.500000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider1/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SeqContRight.SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider1/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onload_init()" script="decl x; decl y;
+decl alternate = 0;
+ 
+ for(x=0;x<16;x++){
+  if(x >=0 && x <= 3){
+   light[x] = 1;
+  }else if(x>=4 && x<= 7){
+   light[x] = 0;
+  }else if(x>=8 && x<= 11){
+   light[x] = 1;
+  }else if(x>=12 && x<= 15){
+   light[x] = 0;
+  }
+ }
+" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider1/onload_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider2" x="598" y="25" width="538" height="412" id="1" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="32768" gradient="1" grid="0" grid_steps="1" horizontal="0" label="0" multicolor="0" nbr="16" physic="0">
+<PARAM name="x=" value="0.500000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SeqContRight.SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider2/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onload_init()" script="decl x; decl y;
+decl alternate = 0;
+ 
+ for(x=0;x<16;x++){
+  if(x >=0 && x <= 3){
+   light[x] = 1;
+  }else if(x>=4 && x<= 7){
+   light[x] = 0;
+  }else if(x>=8 && x<= 11){
+   light[x] = 1;
+  }else if(x>=12 && x<= 15){
+   light[x] = 0;
+  }
+ }
+" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider2/onload_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider3" x="0" y="491" width="541" height="412" id="2" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="32768" gradient="1" grid="0" grid_steps="1" horizontal="0" label="0" multicolor="0" nbr="16" physic="0">
+<PARAM name="x=" value="0.500000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SeqContRight.SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider3/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onload_init()" script="decl x; decl y;
+decl alternate = 0;
+ 
+ for(x=0;x<16;x++){
+  if(x >=0 && x <= 3){
+   light[x] = 1;
+  }else if(x>=4 && x<= 7){
+   light[x] = 0;
+  }else if(x>=8 && x<= 11){
+   light[x] = 1;
+  }else if(x>=12 && x<= 15){
+   light[x] = 0;
+  }
+ }
+" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider3/onload_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider4" x="598" y="486" width="548" height="417" id="3" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="32768" gradient="1" grid="0" grid_steps="1" horizontal="0" label="0" multicolor="0" nbr="16" physic="0">
+<PARAM name="x=" value="0.500000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/MultiSlider4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="on_change()" script="SeqContRight.SwitchesSeq.osc_update();" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider4/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="onload_init()" script="decl x; decl y;
+decl alternate = 0;
+ 
+ for(x=0;x<16;x++){
+  if(x >=0 && x <= 3){
+   light[x] = 1;
+  }else if(x>=4 && x<= 7){
+   light[x] = 0;
+  }else if(x>=8 && x<= 11){
+   light[x] = 1;
+  }else if(x>=12 && x<= 15){
+   light[x] = 0;
+  }
+ }
+" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Sequences/MultiSlider4/onload_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text" x="126" y="-18" width="238" height="61" id="4" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Sequence 1">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Text/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text2" x="779" y="-18" width="238" height="61" id="5" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Sequence 2">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Text2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text3" x="126" y="430" width="238" height="61" id="6" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Sequence 3">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Text3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Sequence4" x="760" y="430" width="238" height="61" id="7" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Sequence 4">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Sequence4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds12" x="0" y="40" width="553" height="43" id="29" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="65793,8355711" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds12/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds12/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds12/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+decl i;
+for(i = 0; i < 16; i++){
+ value[i] = 0;
+}
+ 
+value[cur_step] = 1;" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds13" x="598" y="40" width="548" height="43" id="30" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="65793,8355711" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds13/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds13/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds13/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+decl i;
+for(i = 0; i < 16; i++){
+ value[i] = 0;
+}
+ 
+value[cur_step] = 1;" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds14" x="0" y="495" width="553" height="43" id="31" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="65793,8355711" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds14/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds14/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds14/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+decl i;
+for(i = 0; i < 16; i++){
+ value[i] = 0;
+}
+ 
+value[cur_step] = 1;" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds15" x="598" y="495" width="548" height="43" id="32" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="65793,8355711" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds15/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds15/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Sequences/Leds15/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+decl i;
+for(i = 0; i < 16; i++){
+ value[i] = 0;
+}
+ 
+value[cur_step] = 1;" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="CustomButton" text="TabMinus" x="647" y="654" width="48" height="48" id="468" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="6,0" capture="1" color="8355711,1596013" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/TabMinus/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/TabMinus/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Plus()" script="
+if (Menu.selection<5)Menu.selection=Menu.selection+1;" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/TabMinus/Plus" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="TabPlus" x="599" y="654" width="48" height="48" id="469" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="5,5" capture="1" color="8355711,1596013" label_off="" label_on="" outline="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/TabPlus/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/TabPlus/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Minus()" script="
+if (Menu.selection>0)Menu.selection=Menu.selection-1;" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/DrumSeqRight/TabPlus/Minus" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Menu" x="599" y="701" width="103" height="25" id="467" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" scale="0" content="Option 1,Option 2,Option 3,Option 4,Option 5">
+<PARAM name="selection=" value="4.000000" send="1" osc_target="0" osc_trigger="1" osc_message="/DrumSeqRight/Menu/selection" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="Tabsel()" script="selecttab(DrumFx,Menu.selection);" trigger_script="Menu.selection" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/DrumSeqRight/Menu/Tabsel" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="SeqContRight" x="0" y="48" width="706" height="516" id="469" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1118481" label="1" tabbar="1" meta="0">
+<WINDOW class="Fader" text="Keyvelocity" x="320" y="106" width="71" height="326" id="380" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="13829" cursor="0" grid="0" grid_steps="1" label="0" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.441406" send="17" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Keyvelocity/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="SwitchesSeq" x="-3" y="0" width="695" height="500" id="381" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="0" color="8355711,7241597" column="16" label="2" multicolor="1" multilabel="0" paint="0" radio="0" row="12">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/SwitchesSeq/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=set(stretch(0, 10), -0.5, tmrSeq)" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/SwitchesSeq/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="osc_num=1" send="1" osc_target="1" osc_trigger="1" osc_message="/SeqContRight/SwitchesSeq/osc_num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tmrSeq=cModuleNav.cWindow.On.x?((time*4)%7):tmrSeq" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/SwitchesSeq/tmrSeq" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="onload_init()" script=" 
+decl x; decl y;
+decl alternate = 0;
+
+for(y=0;y<12;y++){
+ for(x=0;x<16;x++){
+  if(x >=0 && x <= 3){
+   SwitchesSeq.light[y*16 + x] = 0.1;
+  }else if(x>=4 && x<= 7){
+   SwitchesSeq.light[y*16 + x] = 0;
+  }else if(x>=8 && x<= 11){
+   SwitchesSeq.light[y*16 + x] = 0.1;
+  }else if(x>=12 && x<= 15){
+   SwitchesSeq.light[y*16 + x] = 0;
+  }
+ }
+}" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/SeqContRight/SwitchesSeq/onload_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="on_change()" script="osc_update();" trigger_script="SwitchesSeq.x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/SeqContRight/SwitchesSeq/on_change" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="osc_update()" script="decl x; decl y;
+
+decl multiplier = 0.1;
+
+for(y=0;y<12;y++){
+ decl vect;
+
+ vect = {SwitchesSeq.x[y*16+0],SwitchesSeq.x[y*16+1],
+              SwitchesSeq.x[y*16+2],SwitchesSeq.x[y*16+3],
+		      SwitchesSeq.x[y*16+4],SwitchesSeq.x[y*16+5],
+              SwitchesSeq.x[y*16+6],SwitchesSeq.x[y*16+7],
+              SwitchesSeq.x[y*16+8],SwitchesSeq.x[y*16+9],
+              SwitchesSeq.x[y*16+10],SwitchesSeq.x[y*16+11],
+              SwitchesSeq.x[y*16+12],SwitchesSeq.x[y*16+13],
+              SwitchesSeq.x[y*16+14],SwitchesSeq.x[y*16+15]};
+ decl mod_sel;
+
+ if(y==0){
+  mod_sel = DrumSeqLeft.VelSelect1.x;
+ }else if(y==1){
+  mod_sel = DrumSeqLeft.VelSelect2.x;
+ }else if(y==2){
+  mod_sel = DrumSeqLeft.VelSelect3.x;
+ }else if(y==3){
+  mod_sel = DrumSeqLeft.VelSelect4.x;
+ }else if(y==4){
+  mod_sel = DrumSeqLeft.VelSelect5.x;
+ }else if(y==5){
+  mod_sel = DrumSeqLeft.VelSelect6.x;
+ }else if(y==6){
+  mod_sel = DrumSeqLeft.VelSelect7.x;
+ }else if(y==7){
+  mod_sel = DrumSeqLeft.VelSelect8.x;
+ }else if(y==8){
+  mod_sel = DrumSeqLeft.VelSelect9.x;
+ }else if(y==9){
+  mod_sel = DrumSeqLeft.VelSelect10.x;
+ }else if(y==10){
+  mod_sel = DrumSeqLeft.VelSelect11.x;
+ }else if(y==11){
+  mod_sel = DrumSeqLeft.VelSelect12.x;
+ }
+
+ decl x;
+ for(x=0;x<5;x++){
+  if(mod_sel[x]){
+   break;
+  }
+ }
+
+ decl vel_mult;
+
+ if(x==0){
+  vel_mult = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+ }else if(x==1){
+  vel_mult = DrumSeqLeft.Sequences.MultiSlider1.x;
+ } else if(x==2){
+  vel_mult = DrumSeqLeft.Sequences.MultiSlider2.x;
+ } else if(x==3){
+  vel_mult = DrumSeqLeft.Sequences.MultiSlider3.x;
+ } else if(x==4){
+  vel_mult = DrumSeqLeft.Sequences.MultiSlider4.x;
+ }
+ 
+ for(x=0;x<16;x++)
+  vect[x] = vect[x] * vel_mult[x];
+
+ oscout(osc_num,'/RightSeq' + y,vect);
+}" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/SeqContRight/SwitchesSeq/osc_update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="rgbchangeR()" script="if (cModuleNav.cWindow.Rainbow.x==1)
+setattribute(SwitchesSeq,'colors',{RGB(148,0,211),RGB(148,30,180),RGB(148,0,100),RGB(75,0,130),RGB(0,0,255),RGB(0,255,0),RGB(255,255,0),RGB(255,127,0),RGB(255,0,0)});
+if (cModuleNav.cWindow.Rainbow.x==0)
+setattribute(SwitchesSeq,'colors',{RGB(0,0,0)});" trigger_script="cModuleNav.cWindow.Rainbow.x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/SeqContRight/SwitchesSeq/rgbchangeR" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds" x="-8" y="4" width="710" height="38" id="382" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,6684672" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds.value[i] = 0;
+ }
+ 
+ 
+ Leds.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds2" x="-9" y="43" width="710" height="38" id="383" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,8341522" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds2/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds2.value[i] = 0;
+ }
+ 
+ 
+ Leds2.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds3" x="-9" y="86" width="710" height="38" id="384" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,8224536" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds3/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds3/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds3.value[i] = 0;
+ }
+ 
+ 
+ Leds3.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds4" x="-9" y="127" width="710" height="38" id="385" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,6323992" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds4/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds4/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds4.value[i] = 0;
+ }
+ 
+ 
+ Leds4.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds5" x="-7" y="170" width="710" height="38" id="386" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,32768" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds5/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds5/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds5/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds5.value[i] = 0;
+ }
+ 
+ 
+ Leds5.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds6" x="-9" y="211" width="710" height="38" id="387" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,1933150" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds6/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds6/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds6/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds6.value[i] = 0;
+ }
+ 
+ 
+ Leds6.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds7" x="-8" y="252" width="710" height="38" id="388" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,1603199" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds7/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds7/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds7/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds7.value[i] = 0;
+ }
+ 
+ 
+ Leds7.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds8" x="-9" y="293" width="710" height="38" id="389" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,3362175" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds8/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds8/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds8/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds8.value[i] = 0;
+ }
+ 
+ 
+ Leds8.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds9" x="-7" y="336" width="710" height="38" id="390" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,3180" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds9/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds9/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds9/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds9.value[i] = 0;
+ }
+ 
+ 
+ Leds9.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds10" x="-9" y="377" width="710" height="38" id="391" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,6177663" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds10/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds10/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds10/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds10.value[i] = 0;
+ }
+ 
+ 
+ Leds10.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds11" x="-9" y="418" width="710" height="38" id="392" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,8332145" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds11/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds11/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds11/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds11.value[i] = 0;
+ }
+ 
+ 
+ Leds11.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds12" x="-9" y="460" width="710" height="38" id="393" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bargraph="0" color="8355711,7077888" column="16" label="0" multicolor="0" row="1">
+<VARIABLE name="value=" value="0.000000" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds12/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds12/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="last_step=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SeqContRight/Leds12/last_step" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-252,10,-248" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="osc_step(OSC_ARGS)" script="decl cur_step = OSC_ARGS[0]-1;
+
+if(cur_step != last_step){
+ last_step = cur_step;
+
+ decl i;
+ for(i = 0; i < 16; i++){
+  Leds12.value[i] = 0;
+ }
+ 
+ 
+ Leds12.value[cur_step] = 1;
+ 
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/stepseq/step" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+</WINDOW>
+</WINDOW>
+</JZML>

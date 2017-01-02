@@ -1,0 +1,123 @@
+<JZML>
+<PROJECT version="5320" width="1920" height="1036" osc_target="-1" midi_target="-1" kbmouse_target="-1" skin="Pixel"/>
+<WINDOW class="JAZZINTERFACE" text="Default" x="0" y="0" width="1920" height="1036" state="1" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="AdvChords" x="822" y="0" width="1098" height="1036" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="Knob" text="scalesSelection1" x="636" y="85" width="64" height="64" id="1" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,8355711" cursor="0" grid="0" grid_steps="33" label="0" mode="1" physic="1" precision="1" type="0" unit="" value="0">
+<PARAM name="x=" value="0.700000" send="29" osc_target="1" osc_trigger="1" osc_message="/AdvScalesSelectiion1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,0.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection1/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection1/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection1/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection1/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection1/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton" x="0" y="0" width="202" height="52" id="2" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="0" bitmap="0,0" capture="1" color="865343,1596013" label_off="Scripts Here!" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/CustomButton/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/CustomButton/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="listoScales()" script="decl scalesList={'Major Pentatonic','Ionian','Lydian','Harmonic Minor 3','Harmonic Minor 6','Lydian #5','Augmented'
+,'Ionian b13','Minor Pentatonic','Aeolian','Dorian','Phrygian','Japanese Pentatonic','Harmonic Minor 4','Harmonic Minor',
+'Melodic Minor','Gipsy Minor','Melodic Minor #11','Indian Pentatonic','Mixolydian','Harmonic Minor 5','Mixolydian #11','Mixolydian b13', 
+'Mixolydian b9','Whole Tone','Harmonic Altered','Altered','Half tone/Whole tone','Locrian','Locrian 9','Harmonic Minor 2', 'Dorian b5'
+,'Harmonic Diminished','Whole Tone/Half Tone','Locrian Diminished','Blues','Blues Major','Augmented Diminished Blues',
+'Prometeus','Eight Tone Spanish','Six Tone Symmetrical','Nine Tone Scale','Three Semitones','Four Semitones',
+'Enigmatic','Romanian Minor','Spanish Gypsy','Neopolitan Major','Neopolitan Minor','Pelog'   };
+
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/AdvChords/CustomButton/listoScales" midi_message="0x90,0x90,0,0" midi_target="-1" flag="0"/>
+</WINDOW>
+<WINDOW class="Switches" text="ScaleTypes" x="173" y="390" width="909" height="199" id="5" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="13" label="0" multicolor="0" multilabel="1" paint="0" radio="1" row="4">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/ScaleTypes/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/ScaleTypes/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="ControlScales()" script="decl i;
+for(i=0;i<50;i++)
+if(ScaleTypes.x[i]==1)
+{
+if(selScale4.x[0]==1)scalesSelection1.x=(i/50);
+if(selScale4.x[1]==1)scalesSelection2.x=(i/50);
+if(selScale4.x[2]==1)scalesSelection3.x=(i/50);
+if(selScale4.x[3]==1)scalesSelection4.x=(i/50);
+}" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/AdvChords/ScaleTypes/ControlScales" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="scaleLabels()" script="decl scalesList={'Major Pentatonic','Ionian','Lydian','Harmonic Minor 3','Harmonic Minor 6','Lydian #5','Augmented'
+,'Ionian b13','Minor Pentatonic','Aeolian','Dorian','Phrygian','Japanese Pentatonic','Harmonic Minor 4','Harmonic Minor',
+'Melodic Minor','Gipsy Minor','Melodic Minor #11','Indian Pentatonic','Mixolydian','Harmonic Minor 5','Mixolydian #11','Mixolydian b13', 
+'Mixolydian b9','Whole Tone','Harmonic Altered','Altered','Half tone/Whole tone','Locrian','Locrian 9','Harmonic Minor 2', 'Dorian b5'
+,'Harmonic Diminished','Whole Tone/Half Tone','Locrian Diminished','Blues','Blues Major','Augmented Diminished Blues',
+'Prometeus','Eight Tone Spanish','Six Tone Symmetrical','Nine Tone Scale','Three Semitones','Four Semitones',
+'Enigmatic','Romanian Minor','Spanish Gypsy','Neopolitan Major','Neopolitan Minor','Pelog', 'None'   };
+setattribute(ScaleTypes, 'labels', scalesList);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/AdvChords/ScaleTypes/scaleLabels" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="scaleValue1" x="714" y="93" width="160" height="48" id="6" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Blues">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleValue1/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Knob" text="scalesSelection2" x="636" y="149" width="64" height="64" id="8" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,8355711" cursor="0" grid="0" grid_steps="33" label="0" mode="1" physic="1" precision="1" type="0" unit="" value="0">
+<PARAM name="x=" value="0.700000" send="29" osc_target="1" osc_trigger="1" osc_message="/AdvScalesSelectiion2" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,0.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="scaleValue2" x="714" y="156" width="160" height="48" id="9" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Blues">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleValue2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Knob" text="scalesSelection3" x="636" y="213" width="64" height="64" id="10" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,8355711" cursor="0" grid="0" grid_steps="33" label="0" mode="1" physic="1" precision="1" type="0" unit="" value="0">
+<PARAM name="x=" value="0.700000" send="29" osc_target="1" osc_trigger="1" osc_message="/AdvScalesSelectiion3" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,0.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection3/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection3/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection3/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection3/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection3/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="scaleValue3" x="714" y="220" width="160" height="48" id="11" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Blues">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleValue3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Knob" text="scalesSelection4" x="636" y="270" width="64" height="64" id="12" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,8355711" cursor="0" grid="0" grid_steps="33" label="0" mode="1" physic="1" precision="1" type="0" unit="" value="0">
+<PARAM name="x=" value="0.700000" send="29" osc_target="1" osc_trigger="1" osc_message="/AdvScalesSelectiion4" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,0.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection4/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection4/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection4/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection4/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scalesSelection4/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="scaleValue4" x="714" y="277" width="160" height="48" id="13" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" content="Blues">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleValue4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="selScale4" x="562" y="65" width="64" height="269" id="7" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="1" label="3" multicolor="0" multilabel="0" paint="0" radio="0" row="4">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/selScale4/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/selScale4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="ScaleKey" x="48" y="93" width="395" height="60" id="14" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="12" label="0" multicolor="0" multilabel="1" paint="0" radio="1" row="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/ScaleKey/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/ScaleKey/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="keylabbeling()" script="decl key = {'C','C#','D','D#','E','F','F#','G','G#','A','A#','B'};
+setattribute(ScaleKey, 'labels', key);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/AdvChords/ScaleKey/keylabbeling" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Knob" text="scaleKey1" x="480" y="85" width="64" height="64" id="15" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,8355711" cursor="0" grid="1" grid_steps="12" label="0" mode="1" physic="1" precision="1" type="0" unit="" value="0">
+<PARAM name="x=" value="0.727273" send="29" osc_target="1" osc_trigger="1" osc_message="/AdvScalesKey1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,0.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleKey1/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleKey1/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleKey1/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleKey1/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/AdvChords/scaleKey1/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="current=" value="0.700000" send="1" osc_target="0" osc_trigger="1" osc_message="/AdvChords/current" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="M1=" value="0.700000" send="1" osc_target="0" osc_trigger="1" osc_message="/AdvChords/M1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-74,0,-84" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="M2=" value="0.700000" send="1" osc_target="0" osc_trigger="1" osc_message="/AdvChords/M2" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-74,0,-84" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="M3=" value="0.700000" send="1" osc_target="0" osc_trigger="1" osc_message="/AdvChords/M3" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="65,-32640,128" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="M4=" value="0.700000" send="1" osc_target="0" osc_trigger="1" osc_message="/AdvChords/M4" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="-74,0,-84" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="FrameText()" script="decl lScales={'Major Pentatonic','Ionian','Lydian','Harmonic Minor 3','Harmonic Minor 6','Lydian #5','Augmented'
+,'Ionian b13','Minor Pentatonic','Aeolian','Dorian','Phrygian','Japanese Pentatonic','Harmonic Minor 4','Harmonic Minor',
+'Melodic Minor','Gipsy Minor','Melodic Minor #11','Indian Pentatonic','Mixolydian','Harmonic Minor 5','Mixolydian #11','Mixolydian b13', 
+'Mixolydian b9','Whole Tone','Harmonic Altered','Altered','Half tone/Whole tone','Locrian','Locrian 9','Harmonic Minor 2', 'Dorian b5'
+,'Harmonic Diminished','Whole Tone/Half Tone','Locrian Diminished','Blues','Blues Major','Augmented Diminished Blues',
+'Prometeus','Eight Tone Spanish','Six Tone Symmetrical','Nine Tone Scale','Three Semitones','Four Semitones',
+'Enigmatic','Romanian Minor','Spanish Gypsy','Neopolitan Major','Neopolitan Minor','Pelog','None'};
+M1=scalesSelection1.x;
+M2=scalesSelection2.x;
+M3=scalesSelection3.x;
+M4=scalesSelection4.x;
+if (scalesSelection1.x==(M1)) {setattribute(scaleValue1,'content',lScales[M1*50]);}
+if (scalesSelection2.x==(M2)) {setattribute(scaleValue2,'content',lScales[M2*50]);}
+if (scalesSelection3.x==(M3)) {setattribute(scaleValue3,'content',lScales[M3*50]);}
+if (scalesSelection4.x==(M4)) {setattribute(scaleValue4,'content',lScales[M4*50]);}" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/AdvChords/FrameText" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+</JZML>
